@@ -10,18 +10,18 @@ URL using DNS: 18.185.57.126
 ### Steps Followed to Configure the server:
 
 1. Update all packages
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
+`sudo apt-get update
+ sudo apt-get upgrade
+ sudo apt-get dist-upgrade`
 
 
 2. Enable automatic security updates
-sudo apt-get install unattended-upgrades
-sudo dpkg-reconfigure --priority=low unattended-upgrades
+`sudo apt-get install unattended-upgrades
+ sudo dpkg-reconfigure --priority=low unattended-upgrades`
 
 3. Change timezone to UTC and Fix language issues
-sudo timedatectl set-timezone UTC
-sudo update-locale LANG=en_US.utf8 LANGUAGE=en_US.utf8 LC_ALL=en_US.utf8
+`sudo timedatectl set-timezone UTC
+ sudo update-locale LANG=en_US.utf8 LANGUAGE=en_US.utf8 LC_ALL=en_US.utf8`
 
 4. Create a new user grader and Give him sudo access
 sudo adduser grader
