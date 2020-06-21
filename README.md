@@ -101,24 +101,27 @@ run `sudo service ssh restart`
 
 Then
 
-`CREATE USER catalog WITH PASSWORD 'password';`
+```sql
+CREATE USER catalog WITH PASSWORD 'password';
 
-`CREATE DATABASE catalog WITH OWNER catalog;`
+CREATE DATABASE catalog WITH OWNER catalog;
 
-`\c catalog`
+\c catalog
 
-`REVOKE ALL ON SCHEMA public FROM public;`
+REVOKE ALL ON SCHEMA public FROM public;
 
-`GRANT ALL ON SCHEMA public TO catalog;`
+GRANT ALL ON SCHEMA public TO catalog;
 
-`\q`
+\q
 
-`exit`
-
+exit
+```
 
 Note: In your catalog project you should change database engine to
 
-`engine = create_engine('postgresql://catalog:password@localhost/catalog')`
+```python
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
+```
 
 
 10. Connect with sftp to upload project zip file
