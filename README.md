@@ -1,13 +1,13 @@
-#Linux Server configuration Project
+# Linux Server configuration Project
 
-#About the project
+### About the project
 A baseline installation of a Linux distribution on a virtual machine and prepare it to host web applications.
 
 IP Address: 18.185.57.126
 SSH Port: 2200
 URL using DNS: 18.185.57.126 
 
-#Steps Followed to Configure the server:
+### Steps Followed to Configure the server:
 
 1. Update all packages
 sudo apt-get update
@@ -105,12 +105,12 @@ Then add the following in catalog.wsgi file
 import sys
 sys.stdout = sys.stderr
 
-# Add this if you'll create a virtual environment, So you need to activate it
-# -------
+### Add this if you'll create a virtual environment, So you need to activate it
+#-------
 activate_this = '/var/www/item_catalog/env/bin/activate_this.py'
 with open(activate_this) as file_:
     exec(file_.read(), dict(__file__=activate_this))
-# -------
+#-------
 
 sys.path.insert(0,"/var/www/item_catalog")
 
@@ -132,7 +132,7 @@ pip install sqlalchemy flask-sqlalchemy psycopg2 bleach requests
 sudo nano /etc/apache2/sites-available/udacity-project.conf
 Then add the following content:
 
-# serve catalog app
+### serve catalog app
 ``` html
 <VirtualHost *:80>
   ServerName 18.185.57.126
@@ -150,7 +150,7 @@ Then add the following content:
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-#Resources:
+### Resources:
 
 * [Ask Ubuntu](https://askubuntu.com/)
 * [Stack Overflow](https://stackoverflow.com/)
